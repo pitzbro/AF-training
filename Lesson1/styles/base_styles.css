@@ -72,7 +72,7 @@ main.main-content {
     overflow-y: scroll;
     scroll-snap-type: y proximity;
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .training-container {
