@@ -1,0 +1,59 @@
+/* Training 1 */
+/* Simple Alignment */
+.training-container:nth-child(1) .training-el {
+
+}
+
+/* Training 2 */
+/* Overlays */
+.training-container:nth-child(2) .training-el {
+
+}
+
+/* Training 3 */
+/* Horizontal 1D */
+.training-container:nth-child(3) .training-el {
+
+}
+
+/* Training 4 */
+/* Vertical 1D */
+.training-container:nth-child(4) .training-el {
+
+}
+
+/* Training 5 */
+/* Masonry Horizontal */
+.training-container:nth-child(5) .training-el {
+
+}
+
+/* Training 6 */
+/* Masonry Horizontal */
+.training-container:nth-child(6) .training-el {
+
+}
+
+/* Training 7 */
+/* 2D - Template Areas */
+.training-container:nth-child(7) .training-el {
+
+}
+
+/* Training 8 */
+/* 2D - Areas + Overlay */
+.training-container:nth-child(8) .training-el {
+
+}
+
+/* Training 9 */
+/* 2D - Template Areas + Overlay */
+.training-container:nth-child(9) .training-el {
+
+}
+
+/* Training 10 */
+/* 2D - Implicit Grid */
+.training-container:nth-child(10) .training-el {
+    
+}
