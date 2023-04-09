@@ -42,7 +42,9 @@ h2 {
 
 h2::before {
     counter-increment: links;
-    content: counter(links) ". ";
+    content: "Lesson "counter(links) ". ";
+    display: block;
+    font-size: 30px;
 }
 
 a {
@@ -52,7 +54,8 @@ a {
 
 .main-nav {
     display: grid;
-    max-width: 90%;
+    max-width: 1200px;
+    width: 90%;
     max-height: 90%;
     gap: 1vw;
     grid-template-columns: repeat(3, 1fr);
@@ -62,38 +65,34 @@ a {
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    grid-template-areas: 
+    'L1 L2 L2'
+    'L1 L3 L3';
 }
 
 .main-nav>* {
-    flex: 1;
-    overflow: hidden;
     border: 1px solid var(--clr-5);
+    overflow: hidden;
 }
 
 .main-nav>*:nth-child(1) {
-    grid-row: span 2;
-    /* border-inline-end: 1px solid var(--clr-6); */
+    grid-area: L1;
 }
 
 .main-nav>*:nth-child(2) {
-    grid-column: span 2;
-    /* border-block-end: 1px solid var(--clr-6); */
+    grid-area: L2;
 }
 
 .main-nav>*:nth-child(3) {
-    grid-column: span 2;
+    grid-area: L3;
 }
 
 .main-nav a {
     display: grid;
     height: 100%;
     overflow: hidden;
-    /* color: #000; */
-    align-items: center;
-    justify-items: center;
     background-color: var(--clr-1);
-    /* background-color: var(--clr-3); */
-
 }
 
 .main-nav a:hover {
@@ -105,18 +104,16 @@ a {
 }
 
 .main-nav img {
-    /* height: 100%; */
-    /* max-width: 80%;
-    max-height: 80%; */
-    width: 298px;
-    object-fit: contain;
-    filter: grayscale(1);
-    overflow: hidden;
-    mix-blend-mode: soft-light;
-    object-position: bottom right;
     align-self: end;
     justify-self: end;
+    max-width: 298px;
+    object-fit: contain;
+    object-position: bottom right;
+    overflow: hidden;
+    mix-blend-mode: soft-light;
+    filter: grayscale(1);
     border-radius: 50%;
     overflow: hidden;
+
     transform: translate(15%, 15%);
 }
