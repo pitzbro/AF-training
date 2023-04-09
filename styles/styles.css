@@ -1,94 +1,83 @@
 :root {
-    --clr1: red;
-    --clr2: green;
-    --clr3: blue;
+    --clr-6: #fff;
+    --clr-5: #9c9c9c;
+    --clr-4: #464646;
+    --clr-3: #2f3455;
+    --clr-2: #2d2d2d;
+    --clr-1: #1d1f2b;
+    --clr-base: #0a0b13;
 }
 
 body {
-    margin: 0;
-    font-family: Lato, helvetica, arial, sans-serif;
-    /* font-family: 'Fredericka the Great', cursive; */
     display: grid;
     grid-template-rows: auto 1fr;
-    /* flex-direction: column; */
     height: 100vh;
+    margin: 0;
+    font-family: Lato, helvetica, arial, sans-serif;
     overflow: hidden;
     counter-reset: links;
-    /* background-color: #2d2d2d; */
-    /* background-color: #3F51B5; */
-    background-color: #0a0b13;
+    background-color: var(--clr-base);
+    color: var(--clr-6);
 }
 
 h1 {
-    color: rgb(255, 255, 255);
-    /* color: #2d2d2d; */
-    background-color: #2d2d2d;
+    background-color: var(--clr-2);
     padding: 0.7em 1em;
     margin: 0;
     font-weight: 400;
     font-size: 20px;
-    border-block-end: 1px solid rgb(70 70 70);
+    border-block-end: 1px solid var(--clr-4);
 }
 
 h2 {
     z-index: 1;
-    /* color: #2d2d2d; */
-    color: #fff;
-    font-weight: 400;
-    font-size: 60px;
-    /* display: grid;
-    grid-auto-flow: column;
-    align-items: end; */
-    font-family: 'Fredericka the Great', cursive;
-    /* font-family: 'Rubik Dirt', cursive; */
-    /* background-color: #fff; */
     align-self: start;
     justify-self: stretch;
     margin: 0;
     padding: .6em 1em;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    font-size: 60px;
 }
 
 h2::before {
     counter-increment: links;
     content: counter(links) ". ";
-    /* display: block; */
-    /* font-size: 2em; */
 }
 
 a {
     text-decoration: none;
+    color: var(--clr-6);
 }
 
 .main-nav {
     display: grid;
     max-width: 90%;
     max-height: 90%;
-    gap: 20px;
+    gap: 1vw;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    flex: 1;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style-type: none;
     align-self: center;
     justify-self: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .main-nav>* {
     flex: 1;
     overflow: hidden;
-    border: 1px solid rgb(156 156 156);
+    border: 1px solid var(--clr-5);
 }
 
 .main-nav>*:nth-child(1) {
     grid-row: span 2;
-    /* border-inline-end: 1px solid #fff; */
+    /* border-inline-end: 1px solid var(--clr-6); */
 }
 
 .main-nav>*:nth-child(2) {
     grid-column: span 2;
-    /* border-block-end: 1px solid #fff; */
+    /* border-block-end: 1px solid var(--clr-6); */
 }
 
 .main-nav>*:nth-child(3) {
@@ -102,13 +91,13 @@ a {
     /* color: #000; */
     align-items: center;
     justify-items: center;
-    background-color: #1d1f2b;
-    /* background-color: #2f3455; */
+    background-color: var(--clr-1);
+    /* background-color: var(--clr-3); */
 
 }
 
 .main-nav a:hover {
-    background-color: #2f3455;
+    background-color: var(--clr-3);
 }
 
 .main-nav a>* {
