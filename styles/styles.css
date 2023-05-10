@@ -29,12 +29,15 @@ h1 {
     border-block-end: 1px solid var(--clr-4);
 }
 
+.text-container {
+    padding: 1.8rem;
+}
+
 h2 {
     z-index: 1;
     align-self: start;
     justify-self: stretch;
     margin: 0;
-    padding: .6em 1em;
     font-family: 'Fredericka the Great', cursive;
     font-weight: 400;
     font-size: 60px;
@@ -42,9 +45,16 @@ h2 {
 
 h2::before {
     counter-increment: links;
-    content: "Lesson "counter(links) ". ";
+    content: "Lesson " counter(links) ". ";
     display: block;
     font-size: 30px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 21px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0.4em 0 0;
 }
 
 a {
@@ -66,9 +76,9 @@ a {
     padding: 0;
     list-style-type: none;
 
-    grid-template-areas: 
-    'L1 L2 L2'
-    'L1 L3 L3';
+    grid-template-areas:
+        'L1 L2 L2'
+        'L1 L3 L3';
 }
 
 .main-nav>* {
