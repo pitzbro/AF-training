@@ -55,7 +55,9 @@ function outputsize(entries) {
     entries.forEach(entry => {
         const container = entry.target;
         const label = container.parentNode.querySelector('.width-label');
-        const w = container.querySelector('.container').offsetWidth;
-        label.innerText = 'width: ' + w + 'px';
+        const w = container.querySelector('.container') ?
+            container.querySelector('.container').offsetWidth :
+            null;
+        if (label) label.innerText = 'width: ' + w + 'px';
     })
 }
