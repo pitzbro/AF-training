@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Basics Training</title>
-    <link rel="stylesheet" href="../styles/base_styles.css">
+    <link rel="stylesheet" href="../../styles/base_styles.css">
     <link rel="stylesheet" href="styles/base_styles.css">
     <link rel="stylesheet" href="styles/training_styles.css">
     <link
@@ -38,11 +38,16 @@
 
                         <circle class="eye" cx="-12" cy="-55" r="3" />
                         <circle class="eye" cx="12" cy="-55" r="3" />
+
+
                         <rect class="mouth" x="-10" y="-40" width="20" height="5" rx="2" />
 
                         <line class="limb" x1="-40" y1="-10" x2="40" y2="-10" />
                         <line class="limb" x1="-25" y1="50" x2="0" y2="-15" />
                         <line class="limb" x1="25" y1="50" x2="0" y2="-15" />
+
+                        <circle class="button" cx="0" cy="-10" r="5" />
+                        <circle class="button" cx="0" cy="10" r="5" />
 
                     </g>
                 </svg>
@@ -55,7 +60,7 @@
             <h2>Viewbox</h2>
 
             <div class="training-el">
-                <svg class="gingerbread" viewBox="-100 -100 200 200">
+                <svg class="gingerbread" viewBox="0 -100 100 100">
                     <use href="#gingerbread" />
                 </svg>
             </div>
@@ -67,7 +72,7 @@
             <h2>PreserveAspectRatio</h2>
 
             <div class="training-el">
-                <svg class="gingerbread" preserveAspectRatio="none" viewBox="-100 -100 200 200">
+                <svg class="gingerbread" preserveAspectRatio="xMaxYMid slice" viewBox="-100 -100 200 200">
                     <use href="#gingerbread" />
                 </svg>
             </div>
@@ -80,7 +85,23 @@
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="-100 -100 200 200">
-                    <use href="#gingerbread" />
+                    <g id="gingerbread">
+                        <circle class="body" cx="0" cy="-50" r="30" />
+
+                        <circle class="eye" cx="-12" cy="-55" r="3" />
+                        <circle class="eye" cx="12" cy="-55" r="3" />
+
+
+                        <rect class="mouth" x="-10" y="-40" width="20" height="5" rx="2" />
+
+                        <line class="limb" x1="-40" y1="-10" x2="40" y2="-10" />
+                        <line class="limb" x1="-25" y1="50" x2="0" y2="-15" />
+                        <line class="limb" x1="25" y1="50" x2="0" y2="-15" />
+
+                        <circle class="button" cx="0" cy="-10" r="5" />
+                        <circle class="button" cx="0" cy="10" r="5" />
+
+                    </g>
                 </svg>
             </div>
 
@@ -120,7 +141,7 @@
 
     </main>
 
-    <script src="../scripts/main.js"></script>
+    <script src="../../scripts/main.js"></script>
 
 </body>
 
