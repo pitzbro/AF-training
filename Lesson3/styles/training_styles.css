@@ -1,124 +1,20 @@
 /* Training 1 */
-/* Social */
-
-@container (max-width: 370px) {
-    .training-container:nth-child(1) .container>span {
-        min-width: .6em;
-        line-height: 1.6em;
-    }
-
-    .training-container:nth-child(1) .container>span::before {
-        margin: 0;
-    }
-
-    .training-container:nth-child(1) .container>span>span {
-        display: none;
-    }
-}
+/* Social Sharing*/
+@container (max-width: 370px) {}
 
 /* Training 2 */
 /* Pager */
+@container (min-width: 200px) {}
 
-.training-container:nth-child(2) .pager-container span {
-    display: none;
-}
-
-.training-container:nth-child(2) .pager-container button {
-    flex: 100%;
-}
-
-@container (min-width: 200px) {
-    .training-container:nth-child(2) .pager-container {
-        justify-content: space-between;
-    }
-
-    .training-container:nth-child(2) .pager-container button {
-        flex: unset;
-    }
-}
-
-@container (min-width: 380px) {
-    .training-container:nth-child(2) .pager-container {
-        justify-content: start;
-    }
-
-    .training-container:nth-child(2) .pager-container span {
-        display: flex;
-    }
-}
+@container (min-width: 380px) {}
 
 
 /* Training 3 */
-/* Search */
-@container (min-width: 328px) {
-    .training-container:nth-child(3) input {
-        font-size: 16px;
-        border-width: 2px;
-        padding-inline-start: 2.8em;
-    }
-
-    .t-search-container>i {
-        display: block;
-    }
-
-    .t-search-container button {
-        align-self: center;
-        line-height: 2.4;
-        margin-inline-end: .4em;
-    }
-
-    .t-search-container button i {
-        display: none;
-    }
-
-    .t-search-container button span {
-        display: block;
-    }
-}
+/* Search Input*/
+@container (min-width: 328px) {}
 
 /* Training 4 */
-/* Vertical 1D */
+/* Grid elements */
+@container (min-width: 170px) {}
 
-.t-grid-container>*:is(:nth-child(4), :nth-child(5)) {
-    grid-row: span 1;
-}
-
-.t-grid-container>*:nth-child(6) {
-    grid-row: span 3;
-}
-
-@container (min-width: 170px) {
-
-    .t-grid-container .card {
-        flex-direction: row;
-    }
-
-    .t-grid-container .card-image {
-        background-color: var(--bg2);
-    }
-}
-
-@container (min-width: 350px) {
-
-    .t-grid-container .card-image {
-        background-color: var(--bg3);
-    }
-
-    .t-grid-container .card {
-        display: grid;
-    }
-
-    .t-grid-container .card>* {
-        grid-area: 1 / 1 / -1 / -1;
-    }
-
-    .t-grid-container .card-text {
-        /* align-self: end; */
-        justify-self: center;
-        margin-top: 32%;
-    }
-}
-
-/* Training 5 */
-/* Masonry Horizontal */
-.training-container:nth-child(5) .container {}
+@container (min-width: 350px) {}
