@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Basics Training</title>
+    <link rel="stylesheet" href="../styles/base_styles.css">
+    <link rel="stylesheet" href="styles/base_styles.css">
+    <link rel="stylesheet" href="styles/training_styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=EB+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+
+        <a class="btn-back" href="/"></a>
+
+        <h1>SVG Basics Training</h1>
+
+        <nav class="main-nav"></nav>
+
+    </header>
+
+    <main class="scroller main-content">
+
+        <div class="training-container">
+            <h2>Positioning Elements</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" viewBox="-100 -100 200 200">
+                    <g id="gingerbread">
+                        <circle class="body" cx="0" cy="-50" r="30" />
+
+                        <circle class="eye" cx="-12" cy="-55" r="3" />
+                        <circle class="eye" cx="12" cy="-55" r="3" />
+                        <rect class="mouth" x="-10" y="-40" width="20" height="5" rx="2" />
+
+                        <line class="limb" x1="-40" y1="-10" x2="40" y2="-10" />
+                        <line class="limb" x1="-25" y1="50" x2="0" y2="-15" />
+                        <line class="limb" x1="25" y1="50" x2="0" y2="-15" />
+
+                    </g>
+                </svg>
+            </div>
+
+            <img src="./images/001.jpg" alt="">
+        </div>
+
+        <div class="training-container">
+            <h2>Viewbox</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" viewBox="-100 -100 200 200">
+                    <use href="#gingerbread" />
+                </svg>
+            </div>
+
+            <img src="./images/002.jpg" alt="">
+        </div>
+
+        <div class="training-container">
+            <h2>PreserveAspectRatio</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" preserveAspectRatio="none" viewBox="-100 -100 200 200">
+                    <use href="#gingerbread" />
+                </svg>
+            </div>
+
+            <img src="./images/003.jpg" alt="">
+        </div>
+
+        <div class="training-container">
+            <h2>SVG Transform</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" viewBox="-100 -100 200 200">
+                    <use href="#gingerbread" />
+                </svg>
+            </div>
+
+            <img src="./images/004.jpg" alt="">
+        </div>
+
+        <div class="training-container">
+            <h2>Animate Path</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" viewBox="0 0 650 600">
+                    <path
+                        d="m600 275c-4.223 79.009-39.281 151.851-96.707 203.293-54.96 49.233-127.807 76.046-203.293 71.707-70.41-4.047-137.692-35.317-185.616-89.384-44.63-50.352-68.7326-116.88-64.384-185.616 4.0685-64.307 33.0541-125.052 82.062-167.938 45.775-40.0565 105.987-61.4196 167.938-57.062 57.424 4.0391 111.918 30.2252 150.26 74.74 35.4 41.099 54.118 94.972 49.74 150.26-4.044 51.078-27.785 99.125-67.417 132.583-36.566 30.868-84.14 46.803-132.583 42.417-44.456-4.025-86.165-25.142-114.905-60.095-26.331-32.023-39.492-73.305-35.095-114.905 4.011-37.945 22.578-73.277 52.773-97.227 27.447-21.77 62.422-32.19 97.227-27.773 31.535 4.002 60.456 20.086 79.55 45.45 17.382 23.093 24.853 51.814 20.45 79.55-4.05 25.514-17.888 47.849-38.128 61.872-18.49 12.81-40.904 17.569-61.872 13.128-18.977-4.019-34.965-15.285-44.194-30.806-8.271-13.91-10.308-30.03-5.806-44.194 4.021-12.65 12.835-22.208 23.483-26.517 9.49-3.839 19.372-3.026 26.517 1.517 6.417 4.081 9.515 10.507 8.839 16.161-0.634 5.305-4.481 8.839-8.839 8.839"
+                        fill="none" stroke="#999" stroke-width="2" />
+                </svg>
+            </div>
+
+            <img src="./images/005.jpg" alt="">
+        </div>
+
+        <div class="training-container">
+            <h2>Position Allong Path</h2>
+
+            <div class="training-el">
+                <svg class="gingerbread" viewBox="0 0 650 600">
+                    <path
+                        d="m600 275c-4.223 79.009-39.281 151.851-96.707 203.293-54.96 49.233-127.807 76.046-203.293 71.707-70.41-4.047-137.692-35.317-185.616-89.384-44.63-50.352-68.7326-116.88-64.384-185.616 4.0685-64.307 33.0541-125.052 82.062-167.938 45.775-40.0565 105.987-61.4196 167.938-57.062 57.424 4.0391 111.918 30.2252 150.26 74.74 35.4 41.099 54.118 94.972 49.74 150.26-4.044 51.078-27.785 99.125-67.417 132.583-36.566 30.868-84.14 46.803-132.583 42.417-44.456-4.025-86.165-25.142-114.905-60.095-26.331-32.023-39.492-73.305-35.095-114.905 4.011-37.945 22.578-73.277 52.773-97.227 27.447-21.77 62.422-32.19 97.227-27.773 31.535 4.002 60.456 20.086 79.55 45.45 17.382 23.093 24.853 51.814 20.45 79.55-4.05 25.514-17.888 47.849-38.128 61.872-18.49 12.81-40.904 17.569-61.872 13.128-18.977-4.019-34.965-15.285-44.194-30.806-8.271-13.91-10.308-30.03-5.806-44.194 4.021-12.65 12.835-22.208 23.483-26.517 9.49-3.839 19.372-3.026 26.517 1.517 6.417 4.081 9.515 10.507 8.839 16.161-0.634 5.305-4.481 8.839-8.839 8.839"
+                        fill="none" stroke="#999" stroke-width="2" />
+                    <use href="#gingerbread" data-ginger="1" />
+                    <use href="#gingerbread" data-ginger="2" />
+                    <use href="#gingerbread" data-ginger="3" />
+                </svg>
+            </div>
+
+            <img src="./images/006.jpg" alt="">
+        </div>
+
+    </main>
+
+    <script src="../scripts/main.js"></script>
+
+</body>
+
+</html>

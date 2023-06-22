@@ -1,0 +1,248 @@
+/* Training 1 */
+/* Simple Alignment */
+.training-container:nth-child(1) .training-el {
+    /* flex  solution*/
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    /* grid solution */
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Training 2 */
+/* Overlays */
+.training-container:nth-child(2) .training-el {
+    /* flex  solution*/
+
+    /* display: flex;
+    justify-content: space-around;
+    align-items: start; */
+
+    /* grid solution */
+
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+/* Training 3 */
+/* Horizontal 1D */
+
+/* flex  solution*/
+/* .training-container:nth-child(3) .training-el {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.training-container:nth-child(3) .training-el main {
+    flex: 1;
+} */
+
+/* grid solution */
+.training-container:nth-child(3) .training-el {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 6px;
+}
+
+/* Training 4 */
+/* Vertical 1D */
+.training-container:nth-child(4) .training-el {
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+}
+
+.training-container:nth-child(4) .training-el>span {
+    mix-blend-mode: multiply;
+}
+
+.training-container:nth-child(4) .training-el span:nth-child(1) {
+    grid-area: 2 / 2 / span 2 / span 2;
+}
+
+.training-container:nth-child(4) .training-el span:nth-child(2) {
+    grid-area: 3 / 3 / span 2 / span 2;
+}
+
+.training-container:nth-child(4) .training-el span:nth-child(3) {
+    grid-area: 4 / 4 / span 2 / span 2;
+}
+
+/* Training 5 */
+/* Masonry Horizontal */
+.training-container:nth-child(5) .training-el {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 6px;
+}
+
+/* Training 6 */
+/* Masonry Horizontal */
+.training-container:nth-child(6) .training-el {
+    column-count: 2;
+    column-gap: 6px;
+    padding: 6px;
+}
+
+.training-container:nth-child(6) .training-el>span {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+/* Training 7 */
+/* 2D - Template Areas */
+.training-container:nth-child(7) .training-el {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 6px;
+    grid-template-areas:
+        "h h"
+        "a m"
+        "f f"
+    ;
+}
+
+.training-container:nth-child(7) header {
+    grid-area: h;
+}
+
+.training-container:nth-child(7) aside {
+    grid-area: a;
+}
+
+.training-container:nth-child(7) main {
+    grid-area: m;
+}
+
+.training-container:nth-child(7) footer {
+    grid-area: f;
+}
+
+/* Training 8 */
+/* 2D - Areas + Overlay */
+.training-container:nth-child(8) .training-el {
+    display: grid;
+    grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+}
+
+.training-container:nth-child(8) .training-el>* {
+    mix-blend-mode: multiply;
+}
+
+.training-container:nth-child(8) .training-el img {
+    grid-area: 2 / 4 / -2 / -1;
+    height: 100%;
+    object-fit: cover;
+}
+
+.training-container:nth-child(8) .training-el main {
+    grid-area: 1 / 4 / 3 / -1;
+}
+
+.training-container:nth-child(8) .training-el aside {
+    grid-area: 3 / 2 / -1 / 4;
+}
+
+.training-container:nth-child(8) .training-el footer {
+    grid-area: -2 / 3 / -1 / -2;
+}
+
+.training-container:nth-child(8) .training-el header {
+    grid-area: -4 / 1 / -3 / -3;
+}
+
+/* Training 9 */
+/* 2D - Template Areas + Overlay */
+.training-container:nth-child(9) .training-el>* {
+    mix-blend-mode: multiply;
+}
+
+.training-container:nth-child(9) .training-el {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 6px;
+    grid-template-areas:
+        "h m"
+        "a m"
+        "f f"
+    ;
+}
+
+.training-container:nth-child(9) header {
+    grid-area: h;
+}
+
+.training-container:nth-child(9) aside {
+    grid-area: a;
+}
+
+.training-container:nth-child(9) main {
+    grid-area: m;
+}
+
+.training-container:nth-child(9) footer {
+    grid-area: f;
+}
+
+.training-container:nth-child(9) .training-el img {
+    grid-area: 2 / 2 / 3 / 3;
+    opacity: 0.5;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Training 10 */
+/* 2D - Implicit Grid */
+.training-container:nth-child(10) .training-el {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-auto-flow: dense;
+    gap: 6px;
+    align-content: start;
+}
+
+.training-container:nth-child(10) .training-el>span {
+    aspect-ratio: 1 / 1;
+}
+
+.training-container:nth-child(10) .training-el>span:nth-child(4n + 0) {
+    grid-area: span 2 / span 2;
+}
+
+/* Training 11 */
+/* Bonus - Table implementation */
+.training-container:nth-child(11) .training-el {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-content: start;
+    gap: 6px;
+}
+
+.training-container:nth-child(11) .training-el header {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+}
+
+.training-container:nth-child(11) .training-el main {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    gap: 6px;
+}
+
+.training-container:nth-child(11) .training-el main>div {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+}
