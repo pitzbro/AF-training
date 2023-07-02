@@ -1,5 +1,5 @@
 /* Training 1 */
-/* Social */
+/* Social Sharing */
 
 @container (max-width: 370px) {
     .training-container:nth-child(1) .container>span {
@@ -77,15 +77,7 @@
 }
 
 /* Training 4 */
-/* Vertical 1D */
-
-.t-grid-container>*:is(:nth-child(4), :nth-child(5)) {
-    grid-row: span 1;
-}
-
-.t-grid-container>*:nth-child(6) {
-    grid-row: span 3;
-}
+/* Grid Elements */
 
 @container (min-width: 170px) {
 
@@ -102,6 +94,7 @@
 
     .t-grid-container .card-image {
         background-color: var(--bg3);
+        padding: 20cqi 0;
     }
 
     .t-grid-container .card {
@@ -113,12 +106,7 @@
     }
 
     .t-grid-container .card-text {
-        /* align-self: end; */
         justify-self: center;
-        margin-top: 32%;
+        margin-top: calc(20cqi + 30px);
     }
 }
-
-/* Training 5 */
-/* Masonry Horizontal */
-.training-container:nth-child(5) .container {}
