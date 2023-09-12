@@ -39,5 +39,13 @@
 .training-container:nth-child(10) .training-el {}
 
 /* Training 11 */
-/* Bonus - Table implementation */
+/* Responsive Template */
 .training-container:nth-child(11) .training-el {}
+
+/* Training 12 */
+/* Fluid Template */
+.training-container:nth-child(12) .training-el {}
+
+/* Training 13 */
+/* Bonus - Table implementation */
+.training-container:nth-child(13) .training-el {}

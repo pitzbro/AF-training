@@ -1,12 +1,25 @@
-.training-el :is(span, header, aside, main, footer) {
+.training-el :is(span, header, aside, main, footer, section) {
     background-color: var(--clr-base);
     padding: 10px;
     display: inline-block;
     text-transform: uppercase;
 }
 
-.training-el :is(span, header, aside, main, footer).light {
+.training-el :is(span, header, aside, main, footer, section).light {
     background-color: var(--clr-base-light);
+}
+
+.training-el :is(span, header, aside, main, footer, section).dark {
+    background-color: var(--clr-dark);
+    color: #fff;
+}
+
+
+.training-el small {
+    background-color: transparent;
+    text-transform:none;
+    font-style: italic;
+    padding: 0;
 }
 
 .training-el img {
@@ -116,3 +129,4 @@
     background-color: #ccc;
     margin-bottom: 6px;
 }
+

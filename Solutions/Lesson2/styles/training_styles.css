@@ -220,28 +220,78 @@
 }
 
 /* Training 11 */
+/* Responsive Template */
+.training-container:nth-child(11) .main-layout {
+    display: grid;
+    grid-template-columns: 
+    minmax(10px, 1fr)
+    minmax(auto, 300px)
+    minmax(10px, 1fr);
+    gap: 6px;
+}
+.training-container:nth-child(11) .main-layout > *:not(.full) {
+    grid-column: 2;
+}
+
+.training-container:nth-child(11) .main-layout > *.full {
+    grid-column: 1 / -1;
+}
+
+/* Training 12 */
+/* Fluid Template */
+.training-container:nth-child(12) .main-layout {
+    display: grid;
+    grid-template-columns: minmax(100px, 0.5fr) 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 6px;
+    grid-template-areas: 
+    "h h"
+    "a m"
+    "f f"
+    ;
+
+}
+
+.training-container:nth-child(12) header {
+    grid-area: h;
+}
+
+.training-container:nth-child(12) aside {
+    grid-area: a;
+}
+
+.training-container:nth-child(12) main {
+    grid-area: m;
+}
+
+.training-container:nth-child(12) footer {
+    grid-area: f;
+}
+
+
+/* Training 13 */
 /* Bonus - Table implementation */
-.training-container:nth-child(11) .training-el {
+.training-container:nth-child(13) .training-el {
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-content: start;
     gap: 6px;
 }
 
-.training-container:nth-child(11) .training-el header {
+.training-container:nth-child(13) .training-el header {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: subgrid;
 }
 
-.training-container:nth-child(11) .training-el main {
+.training-container:nth-child(13) .training-el main {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: subgrid;
     gap: 6px;
 }
 
-.training-container:nth-child(11) .training-el main>div {
+.training-container:nth-child(13) .training-el main>div {
     display: grid;
     grid-column: 1 / -1;
     grid-template-columns: subgrid;
