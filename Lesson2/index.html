@@ -18,29 +18,44 @@
 
     <header class="main-header">
 
-        <a class="btn-back" href="/"></a>
+        <a class="btn-back" href="../index.html" aria-label="Back to lessons"></a>
 
         <h1>Grid Layout Training</h1>
 
-        <nav class="main-nav"></nav>
+        <nav class="main-nav" aria-label="Exercises"></nav>
         <a class="btn-solutions" href="../Solutions/Lesson2/index.html">Solutions</a>
 
     </header>
 
-    <main class="scroller main-content">
+    <a class="skip-link" href="#lesson-content">Skip to exercises</a>
+    <main id="lesson-content" class="scroller main-content" tabindex="-1">
 
-        <div class="training-container">
-            <h2>Simple Alignment</h2>
+        <div class="training-container exercise-alignment" id="exercise-alignment" aria-labelledby="exercise-alignment-title">
+            <h2 id="exercise-alignment-title" tabindex="-1">Simple Alignment</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Center the text horizontally and vertically inside the resizable panel.</p>
+                <p><strong>Check your result:</strong> The text should stay centered as both panel dimensions change.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-alignment</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Let the layout system align the child instead of adding fixed offsets.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Try Grid with justify-items and align-items, or the equivalent Flexbox alignment.</p></details>
+            </div>
 
             <div class="training-el">
                 <span>center me</span>
             </div>
 
-            <img src="./images/001.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Simple Alignment</figcaption><a href="./images/001.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Simple Alignment (new tab)"><img src="./images/001.jpg" alt="Target appearance for Simple Alignment"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Horizontal 1D</h2>
+        <div class="training-container exercise-horizontal-flow" id="exercise-horizontal-flow" aria-labelledby="exercise-horizontal-flow-title">
+            <h2 id="exercise-horizontal-flow-title" tabindex="-1">Horizontal 1D</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Arrange the three items in one horizontal row with evenly distributed space.</p>
+                <p><strong>Check your result:</strong> Items should remain in order and align at the top as the panel changes size.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-horizontal-flow</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Choose a one-dimensional flow and then distribute its free space.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Try grid-auto-flow: column with justify-content, or use Flexbox.</p></details>
+            </div>
 
             <div class="training-el">
                 <span>1</span>
@@ -48,11 +63,18 @@
                 <span>3</span>
             </div>
 
-            <img src="./images/003.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Horizontal 1D</figcaption><a href="./images/003.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Horizontal 1D (new tab)"><img src="./images/003.jpg" alt="Target appearance for Horizontal 1D"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Vertical 1D</h2>
+        <div class="training-container exercise-vertical-flow" id="exercise-vertical-flow" aria-labelledby="exercise-vertical-flow-title">
+            <h2 id="exercise-vertical-flow-title" tabindex="-1">Vertical 1D</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Stack the header, main, and footer so the main region fills the remaining height.</p>
+                <p><strong>Check your result:</strong> Header and footer should fit their content while the main region grows.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-vertical-flow</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Separate content-sized tracks from the flexible track.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Try grid-template-rows: auto 1fr auto with a gap.</p></details>
+            </div>
 
             <div class="training-el">
                 <header>Header</header>
@@ -60,11 +82,18 @@
                 <footer>Footer</footer>
             </div>
 
-            <img src="./images/004.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Vertical 1D</figcaption><a href="./images/004.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Vertical 1D (new tab)"><img src="./images/004.jpg" alt="Target appearance for Vertical 1D"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Overlays</h2>
+        <div class="training-container exercise-overlays" id="exercise-overlays" aria-labelledby="exercise-overlays-title">
+            <h2 id="exercise-overlays-title" tabindex="-1">Overlays</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Overlap the three numbered blocks diagonally as shown in the target.</p>
+                <p><strong>Check your result:</strong> All three blocks should remain visible and overlap in the intended order.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-overlays</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Grid items can occupy intersecting cells.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Create equal grid tracks and assign each block a grid-area spanning several cells.</p></details>
+            </div>
 
             <div class="training-el">
                 <span>1</span>
@@ -72,11 +101,18 @@
                 <span>3</span>
             </div>
 
-            <img src="./images/002.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Overlays</figcaption><a href="./images/002.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Overlays (new tab)"><img src="./images/002.jpg" alt="Target appearance for Overlays"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Masonry Horizontal</h2>
+        <div class="training-container exercise-masonry-horizontal" id="exercise-masonry-horizontal" aria-labelledby="exercise-masonry-horizontal-title">
+            <h2 id="exercise-masonry-horizontal-title" tabindex="-1">Masonry Horizontal</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Wrap the varied-width blocks into horizontal rows with consistent gaps.</p>
+                <p><strong>Check your result:</strong> Block widths should be preserved and additional rows should appear when space runs out.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-masonry-horizontal</code></p>
+                <details><summary>Hint 1 — approach</summary><p>This layout can be built with wrapping rather than fixed coordinates.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Try Flexbox with flex-wrap and gap; align the rows at the start.</p></details>
+            </div>
 
             <div class="training-el masonry horizontal">
                 <span></span>
@@ -91,11 +127,18 @@
                 <span></span>
             </div>
 
-            <img src="./images/005.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Masonry Horizontal</figcaption><a href="./images/005.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Masonry Horizontal (new tab)"><img src="./images/005.jpg" alt="Target appearance for Masonry Horizontal"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Masonry Vertical</h2>
+        <div class="training-container exercise-masonry-vertical" id="exercise-masonry-vertical" aria-labelledby="exercise-masonry-vertical-title">
+            <h2 id="exercise-masonry-vertical-title" tabindex="-1">Masonry Vertical</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Distribute the varied-height blocks into two vertical columns.</p>
+                <p><strong>Check your result:</strong> Preserve the block heights and use consistent spacing between columns and blocks.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-masonry-vertical</code></p>
+                <details><summary>Hint 1 — approach</summary><p>CSS multi-column layout can flow content down before moving across.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Explore column-count and column-gap, and keep individual blocks from splitting.</p></details>
+            </div>
 
             <div class="training-el masonry vertical">
                 <span></span>
@@ -110,11 +153,18 @@
                 <span></span>
             </div>
 
-            <img src="./images/006.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Masonry Vertical</figcaption><a href="./images/006.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Masonry Vertical (new tab)"><img src="./images/006.jpg" alt="Target appearance for Masonry Vertical"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>2D - Template Areas</h2>
+        <div class="training-container exercise-template-areas" id="exercise-template-areas" aria-labelledby="exercise-template-areas-title">
+            <h2 id="exercise-template-areas-title" tabindex="-1">2D - Template Areas</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Build a header, sidebar, main, and footer layout using named grid areas.</p>
+                <p><strong>Check your result:</strong> Header and footer should span both columns; main should be wider than the sidebar.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-template-areas</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Sketch the layout as a small matrix of area names.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Define grid-template-areas and assign a grid-area to each region.</p></details>
+            </div>
 
             <div class="training-el">
                 <header>Header</header>
@@ -123,11 +173,18 @@
                 <footer>Footer</footer>
             </div>
 
-            <img src="./images/007.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · 2D - Template Areas</figcaption><a href="./images/007.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: 2D - Template Areas (new tab)"><img src="./images/007.jpg" alt="Target appearance for 2D - Template Areas"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>2D - Areas + Overlay</h2>
+        <div class="training-container exercise-areas-overlay" id="exercise-areas-overlay" aria-labelledby="exercise-areas-overlay-title">
+            <h2 id="exercise-areas-overlay-title" tabindex="-1">2D - Areas + Overlay</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Place the image and content blocks on an explicit grid to reproduce the layered target.</p>
+                <p><strong>Check your result:</strong> The image should fill its assigned area and the blocks should overlap as shown.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-areas-overlay</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Use grid lines as coordinates for each layer.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Assign grid-area line ranges and use object-fit: cover for the image.</p></details>
+            </div>
 
             <div class="training-el">
                 <img src="./images/bg.jpg" alt="">
@@ -137,11 +194,18 @@
                 <footer>Footer</footer>
             </div>
 
-            <img src="./images/008.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · 2D - Areas + Overlay</figcaption><a href="./images/008.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: 2D - Areas + Overlay (new tab)"><img src="./images/008.jpg" alt="Target appearance for 2D - Areas + Overlay"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>2D - Template Areas + Overlay</h2>
+        <div class="training-container exercise-template-overlay" id="exercise-template-overlay" aria-labelledby="exercise-template-overlay-title">
+            <h2 id="exercise-template-overlay-title" tabindex="-1">2D - Template Areas + Overlay</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Combine named layout areas with an image overlapping the main region.</p>
+                <p><strong>Check your result:</strong> Keep the layout readable while the background image overlaps the intended cells.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-template-overlay</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Named areas and explicit grid-line placement can coexist.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Place the text regions with names, then position the image with grid lines and adjust opacity.</p></details>
+            </div>
 
             <div class="training-el">
                 <img src="./images/bg.jpg" alt="">
@@ -151,11 +215,18 @@
                 <footer>Footer</footer>
             </div>
 
-            <img src="./images/009.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · 2D - Template Areas + Overlay</figcaption><a href="./images/009.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: 2D - Template Areas + Overlay (new tab)"><img src="./images/009.jpg" alt="Target appearance for 2D - Template Areas + Overlay"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>2D - Implicit Grid</h2>
+        <div class="training-container exercise-implicit-grid" id="exercise-implicit-grid" aria-labelledby="exercise-implicit-grid-title">
+            <h2 id="exercise-implicit-grid-title" tabindex="-1">2D - Implicit Grid</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Build a wrapping grid of square tiles, making every fourth tile span two rows and columns.</p>
+                <p><strong>Check your result:</strong> Tiles should stay square and smaller tiles should fill available holes as the panel resizes.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-implicit-grid</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Let the browser create rows and choose how many columns fit.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Combine repeat(auto-fill, minmax(...)), aspect-ratio, spans, and grid-auto-flow: dense.</p></details>
+            </div>
 
             <div class="training-el">
                 <span></span>
@@ -178,12 +249,19 @@
                 <span></span>
             </div>
 
-            <img src="./images/010.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · 2D - Implicit Grid</figcaption><a href="./images/010.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: 2D - Implicit Grid (new tab)"><img src="./images/010.jpg" alt="Target appearance for 2D - Implicit Grid"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
 
-        <div class="training-container">
-            <h2>Responsive template</h2>
+        <div class="training-container exercise-responsive-template" id="exercise-responsive-template" aria-labelledby="exercise-responsive-template-title">
+            <h2 id="exercise-responsive-template-title" tabindex="-1">Responsive template</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Center content within a maximum width of 300px while allowing the form section to span the panel.</p>
+                <p><strong>Check your result:</strong> Content should shrink with the panel and the full-width section should reach both edges.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-responsive-template</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Use flexible gutters around a constrained center track.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Try three columns with minmax() and assign the full-width section to grid-column: 1 / -1.</p></details>
+            </div>
 
             <div class="training-el main-layout">
                 <header class="dark">Header
@@ -204,11 +282,18 @@
                 </footer>
             </div>
 
-            <img src="./images/011.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Responsive template</figcaption><a href="./images/011.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Responsive template (new tab)"><img src="./images/011.jpg" alt="Target appearance for Responsive template"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Fluid template</h2>
+        <div class="training-container exercise-fluid-template" id="exercise-fluid-template" aria-labelledby="exercise-fluid-template-title">
+            <h2 id="exercise-fluid-template-title" tabindex="-1">Fluid template</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Build a fluid two-column layout with a sidebar about one third of the width and at least 100px wide.</p>
+                <p><strong>Check your result:</strong> Header and footer should span the layout; the sidebar should respect its minimum width.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-fluid-template</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Fractional tracks can share space while minmax() supplies a lower bound.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Combine named areas with minmax(100px, 0.5fr) and a 1fr main track.</p></details>
+            </div>
 
             <div class="training-el main-layout">
                 <header class="dark">Header</header>
@@ -223,11 +308,18 @@
                 <footer class="dark">Footer</footer>
             </div>
 
-            <img src="./images/012.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Fluid template</figcaption><a href="./images/012.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Fluid template (new tab)"><img src="./images/012.jpg" alt="Target appearance for Fluid template"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Bonus Training - subgrid table</h2>
+        <div class="training-container exercise-subgrid-table" id="exercise-subgrid-table" aria-labelledby="exercise-subgrid-table-title">
+            <h2 id="exercise-subgrid-table-title" tabindex="-1">Bonus Training - subgrid table</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Align table-like cells across the header and every nested row using subgrid.</p>
+                <p><strong>Check your result:</strong> Each column should size to its content and stay aligned across all rows.</p>
+                <p class="edit-location">Edit <code>Lesson2/styles/training_styles.css</code> · <code>.exercise-subgrid-table</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Nested grids can inherit the parent grid tracks.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Define three parent columns and use grid-template-columns: subgrid on spanning header, main, and row elements.</p></details>
+            </div>
 
             <div class="training-el table">
                 <header>
@@ -254,7 +346,7 @@
                 </main>
             </div>
 
-            <img src="./images/013.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Bonus Training - subgrid table</figcaption><a href="./images/013.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Bonus Training - subgrid table (new tab)"><img src="./images/013.jpg" alt="Target appearance for Bonus Training - subgrid table"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
     </main>

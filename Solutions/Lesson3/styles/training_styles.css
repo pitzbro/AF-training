@@ -2,16 +2,16 @@
 /* Social Sharing */
 
 @container (max-width: 370px) {
-    .training-container:nth-child(1) .container>span {
+    .exercise-social-sharing .container>span {
         min-width: .6em;
         line-height: 1.6em;
     }
 
-    .training-container:nth-child(1) .container>span::before {
+    .exercise-social-sharing .container>span::before {
         margin: 0;
     }
 
-    .training-container:nth-child(1) .container>span>span {
+    .exercise-social-sharing .container>span>span {
         display: none;
     }
 }
@@ -19,30 +19,30 @@
 /* Training 2 */
 /* Pager */
 
-.training-container:nth-child(2) .pager-container span {
+.exercise-pager .pager-container span {
     display: none;
 }
 
-.training-container:nth-child(2) .pager-container button {
+.exercise-pager .pager-container button {
     flex: 100%;
 }
 
 @container (min-width: 200px) {
-    .training-container:nth-child(2) .pager-container {
+    .exercise-pager .pager-container {
         justify-content: space-between;
     }
 
-    .training-container:nth-child(2) .pager-container button {
+    .exercise-pager .pager-container button {
         flex: unset;
     }
 }
 
 @container (min-width: 380px) {
-    .training-container:nth-child(2) .pager-container {
+    .exercise-pager .pager-container {
         justify-content: start;
     }
 
-    .training-container:nth-child(2) .pager-container span {
+    .exercise-pager .pager-container span {
         display: flex;
     }
 }
@@ -51,7 +51,7 @@
 /* Training 3 */
 /* Search */
 @container (min-width: 328px) {
-    .training-container:nth-child(3) input {
+    .exercise-search input {
         font-size: 16px;
         border-width: 2px;
         padding-inline-start: 2.8em;

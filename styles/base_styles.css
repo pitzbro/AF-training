@@ -40,7 +40,7 @@ h1 {
     align-items: center;
     color: #fff;
     background-color: var(--clr-dark-2);
-    padding: 0.7em 1em;
+    padding: 0.3em 1em;
 }
 
 .main-header a.btn-solutions {
@@ -92,8 +92,8 @@ h1 {
 .btn-back {
     background-color: #fff;
     border-radius: 50%;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -198,7 +198,6 @@ main.main-content {
 }
 
 .training-el {
-    grid-area: e;
     border: 2px solid var(--clr-dark);
     min-width: var(--el-size);
     min-height: var(--el-size);
@@ -208,4 +207,419 @@ main.main-content {
     overflow: auto;
     margin: 50px;
     overflow: hidden;
+}
+
+/* Shared exercise interface; kept separate from the student exercise styles. */
+:focus-visible {
+    outline: 3px solid #1769aa;
+    outline-offset: 4px;
+}
+
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 1rem;
+    z-index: 20;
+    padding: 1rem;
+    background: #fff;
+    color: #222;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+.main-header {
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.main-header h1 {
+    min-width: 180px;
+}
+
+.main-header .btn-solutions {
+    min-height: 44px;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+}
+
+.main-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-nav a:hover {
+    background: #444;
+}
+
+.main-nav a[aria-current] {
+    background: var(--clr-base);
+    color: #222;
+    font-weight: bold;
+}
+
+/* .btn-back {
+    min-width: 44px;
+    min-height: 44px;
+} */
+
+main.main-content {
+    min-height: 0;
+    scroll-snap-type: y proximity;
+}
+
+.training-container {
+    grid-template-columns: minmax(240px, 300px) minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "h h h" "guide e i" "guide navigation navigation";
+}
+
+.training-container::before,
+.training-container::after {
+    display: none;
+}
+
+.training-container>h2 {
+    color: inherit;
+    width: 100%;
+}
+
+.exercise-guide {
+    grid-area: guide;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 1rem 1.25rem;
+    max-width: 100%;
+    border-inline-end: 1px solid #ddd;
+    background-color: #2c2c2c;
+    color: #ececec;
+}
+
+.exercise-guide p {
+    line-height: 1.5;
+    margin: .6rem 0;
+}
+
+.edit-location {
+    font-size: .9rem;
+    overflow-wrap: anywhere;
+    color: #a1a1a1;
+}
+
+.exercise-guide details {
+    margin: .5rem 0;
+    padding: .6rem .8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.exercise-guide summary {
+    cursor: pointer;
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.reference-panel,
+.workspace {
+    align-self: stretch;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr minmax(70px, auto);
+
+    >*:nth-child(2) {
+        place-self: center;
+    }
+
+    >*:nth-child(3) {
+        align-self: end;
+        margin: 0;
+        color: #626262;
+    }
+}
+
+.workspace {
+    grid-area: e;
+    align-self: stretch;
+    justify-self: stretch;
+    min-width: 0;
+    padding: 1rem;
+    background: #eee;
+    overflow: auto;
+}
+
+.workspace h3 {
+    margin: 0 0 .5rem;
+}
+
+.workspace-info>p,
+.reference-panel>p {
+    font-size: 0.75rem;
+}
+
+.resize-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem;
+    font-size: 0.8rem;
+}
+
+.resize-controls input {
+    flex: 1;
+    min-width: 100px;
+    appearance: none;
+    background: transparent;
+    height: 24px;
+    cursor: pointer;
+    color: #787878;
+}
+
+.resize-controls input::-webkit-slider-runnable-track {
+    height: 4px;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 2rem;
+}
+
+.resize-controls input::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin-top: -7px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--clr-base);
+}
+
+.resize-controls input::-moz-range-track {
+    height: 4px;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+}
+
+.resize-controls input::-moz-range-progress {
+    background: transparent;
+}
+
+.resize-controls input::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--clr-base);
+}
+
+.resize-controls button {
+    font-size: 0.8rem;
+    color: inherit;
+    cursor: pointer;
+    padding-block: 0.3em;
+}
+
+.workspace-info>p {
+    margin: 0;
+}
+
+.resize-controls>output {
+    margin: 0;
+    font-size: .9rem;
+}
+
+.workspace .training-el {
+    margin: 1rem 0;
+    resize: both;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.reference-panel {
+    grid-area: i;
+    align-self: stretch;
+    justify-self: stretch;
+    margin: 0;
+    padding: 1rem;
+    min-width: 0;
+}
+
+.reference-panel figcaption {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.reference-panel img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #999;
+}
+
+.reference-panel a {
+    display: inline-block;
+}
+
+.exercise-navigation {
+    width: 100%;
+    justify-content: center;
+    border-top: 1px solid #ddd;
+    grid-area: navigation;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    color: #626262;
+    font-size: 0.9rem;
+}
+
+.exercise-navigation a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--clr-base);
+    text-decoration: none;
+}
+
+@media (max-width: 1100px) {
+    .main-header h1 {
+        font-size: 1rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .training-container {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "h" "guide" "e" "i" "navigation";
+    }
+
+    .main-header a.btn-solutions {
+        margin: 0;
+        padding: .5rem;
+    }
+
+    .exercise-guide {
+        padding: 0 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main.main-content {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+
+.instructions-toggle {
+    display: none;
+}
+
+.instructions-drawer {
+    position: fixed;
+    inset: 0 auto 0 0;
+    margin: 0;
+    width: min(90vw, 380px);
+    max-width: 100%;
+    height: 100%;
+    height: 100dvh;
+    max-height: 100%;
+    padding: 1.25rem;
+    border: 0;
+    border-inline-end: 1px solid #ccc;
+    background: #fff;
+    color: var(--clr-dark-2);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    transform: translateX(-100%);
+    transition: transform .25s ease, display .25s allow-discrete, overlay .25s allow-discrete;
+}
+
+.instructions-drawer[open] {
+    transform: translateX(0);
+}
+
+.instructions-drawer::backdrop {
+    background: rgb(0 0 0 / 45%);
+}
+
+.drawer-header {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.drawer-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.drawer-header button,
+.instructions-toggle {
+    min-height: 44px;
+    padding: .6rem 1rem;
+    border: 1px solid #666;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+    cursor: pointer;
+}
+
+.instructions-drawer .exercise-guide {
+    display: block;
+    padding: 0;
+    border: 0;
+}
+
+@starting-style {
+    .instructions-drawer[open] {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 1100px) {
+    .instructions-enhanced .training-container>.exercise-guide {
+        display: none;
+    }
+
+    .instructions-enhanced .instructions-toggle {
+        display: block;
+        grid-area: guide;
+        justify-self: start;
+        margin-inline: 1rem;
+    }
+
+    .exercise-guide {
+        border-inline-end: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .instructions-drawer {
+        transition: none;
+    }
 }

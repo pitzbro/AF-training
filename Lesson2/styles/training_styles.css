@@ -1,51 +1,51 @@
 /* Training 1 */
 /* Simple Alignment */
-.training-container:nth-child(1) .training-el {}
+.exercise-alignment .training-el {}
 
 /* Training 2 */
-/* Overlays */
-.training-container:nth-child(2) .training-el {}
+/* Horizontal 1D */
+.exercise-horizontal-flow .training-el {}
 
 /* Training 3 */
-/* Horizontal 1D */
-.training-container:nth-child(3) .training-el {}
+/* Vertical 1D */
+.exercise-vertical-flow .training-el {}
 
 /* Training 4 */
-/* Vertical 1D */
-.training-container:nth-child(4) .training-el {}
+/* Overlays */
+.exercise-overlays .training-el {}
 
 /* Training 5 */
 /* Masonry Horizontal */
-.training-container:nth-child(5) .training-el {}
+.exercise-masonry-horizontal .training-el {}
 
 /* Training 6 */
-/* Masonry Horizontal */
-.training-container:nth-child(6) .training-el {}
+/* Masonry Vertical */
+.exercise-masonry-vertical .training-el {}
 
 /* Training 7 */
 /* 2D - Template Areas */
-.training-container:nth-child(7) .training-el {}
+.exercise-template-areas .training-el {}
 
 /* Training 8 */
 /* 2D - Areas + Overlay */
-.training-container:nth-child(8) .training-el {}
+.exercise-areas-overlay .training-el {}
 
 /* Training 9 */
 /* 2D - Template Areas + Overlay */
-.training-container:nth-child(9) .training-el {}
+.exercise-template-overlay .training-el {}
 
 /* Training 10 */
 /* 2D - Implicit Grid */
-.training-container:nth-child(10) .training-el {}
+.exercise-implicit-grid .training-el {}
 
 /* Training 11 */
-/* Responsive Template */
-.training-container:nth-child(11) .training-el {}
+/* Responsive template */
+.exercise-responsive-template .main-layout {}
 
 /* Training 12 */
-/* Fluid Template */
-.training-container:nth-child(12) .training-el {}
+/* Fluid template */
+.exercise-fluid-template .training-el {}
 
 /* Training 13 */
-/* Bonus - Table implementation */
-.training-container:nth-child(13) .training-el {}
+/* Bonus Training - subgrid table */
+.exercise-subgrid-table .training-el {}

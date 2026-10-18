@@ -18,18 +18,26 @@
 
     <header class="main-header">
 
-        <a class="btn-back" href="/"></a>
+        <a class="btn-back" href="../index.html" aria-label="Back to lessons"></a>
 
         <h1>SVG Basics Training</h1>
 
-        <nav class="main-nav"></nav>
+        <nav class="main-nav" aria-label="Exercises"></nav>
         <a class="btn-solutions" href="../Solutions/Lesson1/index.html">Solutions</a>
     </header>
 
-    <main class="scroller main-content">
+    <a class="skip-link" href="#lesson-content">Skip to exercises</a>
+    <main id="lesson-content" class="scroller main-content" tabindex="-1">
 
-        <div class="training-container">
-            <h2>Positioning Elements</h2>
+        <div class="training-container exercise-positioning" id="exercise-positioning" aria-labelledby="exercise-positioning-title">
+            <h2 id="exercise-positioning-title" tabindex="-1">Positioning Elements</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Position the SVG shapes to match the gingerbread target. Work in SVG coordinates rather than using CSS positioning.</p>
+                <p><strong>Check your result:</strong> The eyes should be level, with the mouth below them and the limbs joined to the body.</p>
+                <p class="edit-location">Edit <code>Lesson1/index.html</code> · <code>.exercise-positioning</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Find the origin and trace how positive x and y move across the drawing.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Use cx/cy for circles and x/y or x1/y1/x2/y2 for the other shapes.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="-100 -100 200 200">
@@ -48,11 +56,18 @@
                 </svg>
             </div>
 
-            <img src="./images/001.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Positioning Elements</figcaption><a href="./images/001.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Positioning Elements (new tab)"><img src="./images/001.jpg" alt="Target appearance for Positioning Elements"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Viewbox</h2>
+        <div class="training-container exercise-viewbox" id="exercise-viewbox" aria-labelledby="exercise-viewbox-title">
+            <h2 id="exercise-viewbox-title" tabindex="-1">ViewBox</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Change the viewBox to frame the drawing like the target without changing its shape coordinates.</p>
+                <p><strong>Check your result:</strong> The whole intended drawing should be visible with the same framing as the target.</p>
+                <p class="edit-location">Edit <code>Lesson1/index.html</code> · <code>.exercise-viewbox</code></p>
+                <details><summary>Hint 1 — approach</summary><p>The viewBox describes the window into the SVG coordinate system.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Its four numbers are min-x, min-y, width, and height; adjust the window rather than each shape.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="-100 -100 200 200">
@@ -60,11 +75,18 @@
                 </svg>
             </div>
 
-            <img src="./images/002.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · ViewBox</figcaption><a href="./images/002.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: ViewBox (new tab)"><img src="./images/002.jpg" alt="Target appearance for ViewBox"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>PreserveAspectRatio</h2>
+        <div class="training-container exercise-aspect-ratio" id="exercise-aspect-ratio" aria-labelledby="exercise-aspect-ratio-title">
+            <h2 id="exercise-aspect-ratio-title" tabindex="-1">PreserveAspectRatio</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Resize the example and choose how the drawing fits its viewport. Match the target without distorting the figure.</p>
+                <p><strong>Check your result:</strong> Check both a wide and a tall viewport; circles should remain circular.</p>
+                <p class="edit-location">Edit <code>Lesson1/index.html</code> · <code>.exercise-aspect-ratio</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Compare stretching with fitting and cropping.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Experiment with preserveAspectRatio values using xMidYMid with meet or slice.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" preserveAspectRatio="none" viewBox="-100 -100 200 200">
@@ -72,15 +94,22 @@
                 </svg>
             </div>
 
-            <img src="./images/003.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · PreserveAspectRatio</figcaption><a href="./images/003.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: PreserveAspectRatio (new tab)"><img src="./images/003.jpg" alt="Target appearance for PreserveAspectRatio"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>SVG Transform</h2>
+        <div class="training-container exercise-svg-transform" id="exercise-svg-transform" aria-labelledby="exercise-svg-transform-title">
+            <h2 id="exercise-svg-transform-title" tabindex="-1">SVG Transform</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Rotate the marked leg around its top joint to match the target.</p>
+                <p><strong>Check your result:</strong> The leg should turn while its top joint stays in place.</p>
+                <p class="edit-location">Edit <code>Lesson1/styles/training_styles.css</code> · <code>.exercise-svg-transform</code></p>
+                <details><summary>Hint 1 — approach</summary><p>A transform needs a suitable reference box and pivot.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Explore transform-box: fill-box and transform-origin before adjusting rotate().</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="-100 -100 200 200">
-                    <g id="gingerbread">
+                    <g id="gingerbread-transform">
                         <circle class="body" cx="0" cy="-50" r="30" />
 
                         <circle class="eye" cx="-12" cy="-55" r="3" />
@@ -100,11 +129,18 @@
                 </svg>
             </div>
 
-            <img src="./images/004.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · SVG Transform</figcaption><a href="./images/004.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: SVG Transform (new tab)"><img src="./images/004.jpg" alt="Target appearance for SVG Transform"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Animate Path</h2>
+        <div class="training-container exercise-animate-path" id="exercise-animate-path" aria-labelledby="exercise-animate-path-title">
+            <h2 id="exercise-animate-path-title" tabindex="-1">Animate Path</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Animate the spiral so its stroke appears to draw and erase repeatedly.</p>
+                <p><strong>Check your result:</strong> The full path should participate in a smooth repeating animation.</p>
+                <p class="edit-location">Edit <code>Lesson1/styles/training_styles.css</code> · <code>.exercise-animate-path</code></p>
+                <details><summary>Hint 1 — approach</summary><p>A dashed stroke can behave like one long dash covering the whole path.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Use the path length for stroke-dasharray and animate stroke-dashoffset with keyframes.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="0 0 650 600">
@@ -114,11 +150,18 @@
                 </svg>
             </div>
 
-            <img src="./images/005.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Animate Path</figcaption><a href="./images/005.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Animate Path (new tab)"><img src="./images/005.jpg" alt="Target appearance for Animate Path"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>Motion Allong Path</h2>
+        <div class="training-container exercise-motion-path" id="exercise-motion-path" aria-labelledby="exercise-motion-path-title">
+            <h2 id="exercise-motion-path-title" tabindex="-1">Motion Along Path</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Move the three figures along the spiral with staggered timing.</p>
+                <p><strong>Check your result:</strong> Each figure should follow the curve and start at a different time.</p>
+                <p class="edit-location">Edit <code>Lesson1/styles/training_styles.css</code> · <code>.exercise-motion-path</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Movement can follow a path instead of separate x/y translations.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Combine offset-path, animated offset-distance, and individual animation-delay values.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg class="gingerbread" viewBox="0 0 650 600">
@@ -131,24 +174,31 @@
                 </svg>
             </div>
 
-            <img src="./images/006.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Motion Along Path</figcaption><a href="./images/006.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Motion Along Path (new tab)"><img src="./images/006.jpg" alt="Target appearance for Motion Along Path"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container">
-            <h2>SVG Morph</h2>
+        <div class="training-container exercise-svg-morph" id="exercise-svg-morph" aria-labelledby="exercise-svg-morph-title">
+            <h2 id="exercise-svg-morph-title" tabindex="-1">SVG Morph</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Morph one polygon between the star and checkmark when the pointer enters and leaves it. Edit the SVG markup for this task.</p>
+                <p><strong>Check your result:</strong> The transition should work in both directions without leaving two overlapping shapes.</p>
+                <p class="edit-location">Edit <code>Lesson1/index.html</code> · <code>.exercise-svg-morph</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Both polygon states need matching numbers of point coordinates.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Use SVG animate elements for the points attribute, triggered by mouseenter and mouseleave.</p></details>
+            </div>
 
             <div class="training-el">
                 <svg viewBox="0 0 194.6 185.1">
                     <polygon id="shape" fill="#cd803d"
                         points="97.3,0 127.4,60.9 194.6,70.7 145.9,118.1 157.4,185.1 97.3,153.5 37.2,185.1 48.6,118.1 0,70.7 67.2,60.9">
                     </polygon>
-                    <polygon id="shape" fill="#cd803d" style="mix-blend-mode: multiply; opacity: 0.6;"
+                    <polygon id="shape-target" fill="#cd803d" style="mix-blend-mode: multiply; opacity: 0.6;"
                         points="110,58.2 147.3,0 192.1,29 141.7,105.1 118.7,139.8 88.8,185.1 46.1,156.5 0,125 23.5,86.6 71.1,116.7">
                     </polygon>
                 </svg>
             </div>
 
-            <img src="./images/007.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · SVG Morph</figcaption><a href="./images/007.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: SVG Morph (new tab)"><img src="./images/007.jpg" alt="Target appearance for SVG Morph"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
     </main>

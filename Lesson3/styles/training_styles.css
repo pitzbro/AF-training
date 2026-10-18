@@ -1,20 +1,26 @@
-/* Training 1 */
-/* Social Sharing*/
-@container (max-width: 370px) {}
+/* Training 1 — Social Sharing */
+@container (max-width: 370px) {
+    .exercise-social-sharing .container > span {}
+}
 
-/* Training 2 */
-/* Pager */
-@container (min-width: 200px) {}
+/* Training 2 — Pager: set compact defaults before adding queries. */
+.exercise-pager .pager-container {}
+@container (min-width: 200px) {
+    .exercise-pager .pager-container {}
+}
+@container (min-width: 380px) {
+    .exercise-pager .pager-container {}
+}
 
-@container (min-width: 380px) {}
+/* Training 3 — Search Input */
+@container (min-width: 328px) {
+    .exercise-search .t-search-container {}
+}
 
-
-/* Training 3 */
-/* Search Input*/
-@container (min-width: 328px) {}
-
-/* Training 4 */
-/* Grid elements */
-@container (min-width: 170px) {}
-
-@container (min-width: 350px) {}
+/* Training 4 — Grid Elements */
+@container (min-width: 170px) {
+    .exercise-responsive-cards .card {}
+}
+@container (min-width: 350px) {
+    .exercise-responsive-cards .card {}
+}

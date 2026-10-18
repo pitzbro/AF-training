@@ -1,17 +1,17 @@
-/* Psitioning Elements 4 */
-/* Vertical 1D */
+/* Training 4 */
+/* SVG Transform */
 
-.training-container:nth-child(4) .training-el [data-limb] {}
+.exercise-svg-transform .training-el [data-limb] {}
 
 /* Training 5 */
 /* Animate Path */
-.training-container:nth-child(5) .training-el [data-spiral] {}
+.exercise-animate-path .training-el [data-spiral] {}
 
 /* Training 6 */
 /* Move along path */
 
-.training-container:nth-child(6) .training-el [data-ginger] {}
+.exercise-motion-path .training-el [data-ginger] {}
 
-.training-container:nth-child(6) .training-el [data-ginger="1"] {}
+.exercise-motion-path .training-el [data-ginger="1"] {}
 
-.training-container:nth-child(6) .training-el [data-ginger="2"] {}
+.exercise-motion-path .training-el [data-ginger="2"] {}

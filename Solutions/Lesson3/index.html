@@ -19,18 +19,26 @@
 
     <header class="main-header">
 
-        <a class="btn-back" href="/"></a>
+        <a class="btn-back" href="../../index.html" aria-label="Back to lessons"></a>
 
         <h1>Container Queries Training</h1>
 
-        <nav class="main-nav"></nav>
+        <nav class="main-nav" aria-label="Exercises"></nav>
 
     </header>
 
-    <main class="scroller main-content">
+    <a class="skip-link" href="#lesson-content">Skip to exercises</a>
+    <main id="lesson-content" class="scroller main-content" tabindex="-1">
 
-        <div class="training-container t-social">
-            <h2>Social Sharing</h2>
+        <div class="training-container t-social exercise-social-sharing" id="exercise-social-sharing" aria-labelledby="exercise-social-sharing-title">
+            <h2 id="exercise-social-sharing-title" tabindex="-1">Social Sharing</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Use a container query to switch sharing buttons to compact icons at widths of 370px or less.</p>
+                <p><strong>Check your result:</strong> Resize the panel: labels should disappear in the compact version while the icons remain visible.</p>
+                <p class="edit-location">Edit <code>Lesson3/styles/training_styles.css</code> · <code>.exercise-social-sharing</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Query the available component width rather than the browser viewport.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Inside @container (max-width: 370px), hide the inner labels and reduce button spacing.</p></details>
+            </div>
 
             <div class="training-el">
                 <div class="container">
@@ -39,13 +47,18 @@
                     <span class="faa linkedin"><span>Share</span></span>
                 </div>
             </div>
-
-            <span class="width-label"></span>
-            <img src="./images/001.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Social Sharing</figcaption><a href="./images/001.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Social Sharing (new tab)"><img src="./images/001.jpg" alt="Target appearance for Social Sharing"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container t-pager">
-            <h2>Pager</h2>
+        <div class="training-container t-pager exercise-pager" id="exercise-pager" aria-labelledby="exercise-pager-title">
+            <h2 id="exercise-pager-title" tabindex="-1">Pager</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Adapt pagination to three sizes: stacked buttons, paired buttons, then buttons with page numbers.</p>
+                <p><strong>Check your result:</strong> Below 200px stack the buttons; at 200px show them side by side; at 380px reveal page numbers.</p>
+                <p class="edit-location">Edit <code>Lesson3/styles/training_styles.css</code> · <code>.exercise-pager</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Start with the smallest layout and add features as space increases.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Set the compact defaults first, then use min-width container queries at 200px and 380px.</p></details>
+            </div>
 
             <div class="training-el">
                 <div class="container">
@@ -61,12 +74,18 @@
                     </div>
                 </div>
             </div>
-            <span class="width-label"></span>
-            <img src="./images/002.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Pager</figcaption><a href="./images/002.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Pager (new tab)"><img src="./images/002.jpg" alt="Target appearance for Pager"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container t-search">
-            <h2>Search Input</h2>
+        <div class="training-container t-search exercise-search" id="exercise-search" aria-labelledby="exercise-search-title">
+            <h2 id="exercise-search-title" tabindex="-1">Search Input</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Expand the compact icon search into a labeled search control when its container reaches 328px.</p>
+                <p><strong>Check your result:</strong> The wider version should show the Search text and leading icon without overlapping the input text.</p>
+                <p class="edit-location">Edit <code>Lesson3/styles/training_styles.css</code> · <code>.exercise-search</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Change related parts of the component together at the breakpoint.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Use @container (min-width: 328px) to adjust input padding and swap the button icon for its label.</p></details>
+            </div>
 
             <div class="training-el">
                 <div class="container">
@@ -78,12 +97,18 @@
                     </form>
                 </div>
             </div>
-            <span class="width-label"></span>
-            <img src="./images/003.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Search Input</figcaption><a href="./images/003.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Search Input (new tab)"><img src="./images/003.jpg" alt="Target appearance for Search Input"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
-        <div class="training-container t-grid">
-            <h2>Grid Elements</h2>
+        <div class="training-container t-grid exercise-responsive-cards" id="exercise-responsive-cards" aria-labelledby="exercise-responsive-cards-title">
+            <h2 id="exercise-responsive-cards-title" tabindex="-1">Grid Elements</h2>
+            <div class="exercise-guide">
+                <p><strong>Your task:</strong> Make each card adapt to its own container: vertical, horizontal at 170px, and layered at 350px.</p>
+                <p><strong>Check your result:</strong> Cards in different-width grid cells should display different layouts at the same viewport size.</p>
+                <p class="edit-location">Edit <code>Lesson3/styles/training_styles.css</code> · <code>.exercise-responsive-cards</code></p>
+                <details><summary>Hint 1 — approach</summary><p>Each card wrapper is an independent query container.</p></details>
+                <details><summary>Hint 2 — properties to explore</summary><p>Use 170px and 350px container queries; explore cqi units for spacing in the largest layout.</p></details>
+            </div>
 
             <div class="training-el">
                 <div class="t-grid-container">
@@ -132,7 +157,7 @@
 
                 </div>
             </div>
-            <img src="./images/004.jpg" alt="">
+            <figure class="reference-panel"><figcaption>Target · Grid Elements</figcaption><a href="./images/004.jpg" target="_blank" rel="noopener" aria-label="Open full-size target: Grid Elements (new tab)"><img src="./images/004.jpg" alt="Target appearance for Grid Elements"></a><p>Open image to inspect the full-size target (new tab).</p></figure>
         </div>
 
     </main>
